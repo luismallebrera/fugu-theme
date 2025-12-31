@@ -1,0 +1,9 @@
+{
+  "name": "elementor/blank-starter",
+  "description": "Blank Elementor starter theme without external framework dependencies",
+  "type": "project",
+  "require": {},
+  "config": {
+    "vendor-dir": "inc/vendor"
+  }
+}

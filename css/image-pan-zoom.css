@@ -1,0 +1,98 @@
+/* Image Pan & Zoom Styles */
+
+.image-pan-zoom-container {
+    user-select: none;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+}
+
+.image-pan-zoom-container.dragging {
+    cursor: grabbing !important;
+}
+
+.image-pan-zoom-container img {
+    transition: transform 0.2s ease-out;
+}
+
+.ipz-controls {
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    z-index: 10;
+}
+
+.ipz-controls-top-right {
+    top: 20px;
+    right: 20px;
+}
+
+.ipz-controls-top-left {
+    top: 20px;
+    left: 20px;
+}
+
+.ipz-controls-bottom-right {
+    bottom: 20px;
+    right: 20px;
+}
+
+.ipz-controls-bottom-left {
+    bottom: 20px;
+    left: 20px;
+}
+
+.ipz-controls-top-center {
+    top: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.ipz-controls-bottom-center {
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.ipz-btn {
+    width: 40px;
+    height: 40px;
+    border: none;
+    border-radius: 4px;
+    background: rgba(255, 255, 255, 0.9);
+    color: #333;
+    font-size: 20px;
+    font-weight: bold;
+    cursor: pointer;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+    transition: all 0.2s ease;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0;
+    line-height: 1;
+}
+
+.ipz-btn:hover {
+    background: #fff;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+    transform: translateY(-2px);
+}
+
+.ipz-btn:active {
+    transform: translateY(0);
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15);
+}
+
+.ipz-btn:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+}
+
+.ipz-btn:disabled:hover {
+    transform: none;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+}

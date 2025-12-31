@@ -1,0 +1,147 @@
+/**
+ * Custom AOS Animations
+ * Add your custom animation classes here
+ * Use the format: [data-aos="your-animation-name"]
+ */
+
+/* Fix for easing functions - ensure they work with quoted attribute values */
+[data-aos-easing="linear"] {
+    transition-timing-function: linear !important;
+}
+[data-aos-easing="ease"] {
+    transition-timing-function: ease !important;
+}
+[data-aos-easing="ease-in"] {
+    transition-timing-function: ease-in !important;
+}
+[data-aos-easing="ease-out"] {
+    transition-timing-function: ease-out !important;
+}
+[data-aos-easing="ease-in-out"] {
+    transition-timing-function: ease-in-out !important;
+}
+[data-aos-easing="ease-in-back"] {
+    transition-timing-function: cubic-bezier(0.6, -0.28, 0.735, 0.045) !important;
+}
+[data-aos-easing="ease-out-back"] {
+    transition-timing-function: cubic-bezier(0.175, 0.885, 0.32, 1.275) !important;
+}
+[data-aos-easing="ease-in-out-back"] {
+    transition-timing-function: cubic-bezier(0.68, -0.55, 0.265, 1.55) !important;
+}
+[data-aos-easing="ease-in-sine"] {
+    transition-timing-function: cubic-bezier(0.47, 0, 0.745, 0.715) !important;
+}
+[data-aos-easing="ease-out-sine"] {
+    transition-timing-function: cubic-bezier(0.39, 0.575, 0.565, 1) !important;
+}
+[data-aos-easing="ease-in-out-sine"] {
+    transition-timing-function: cubic-bezier(0.445, 0.05, 0.55, 0.95) !important;
+}
+[data-aos-easing="ease-in-quad"] {
+    transition-timing-function: cubic-bezier(0.55, 0.085, 0.68, 0.53) !important;
+}
+[data-aos-easing="ease-out-quad"] {
+    transition-timing-function: cubic-bezier(0.25, 0.46, 0.45, 0.94) !important;
+}
+[data-aos-easing="ease-in-out-quad"] {
+    transition-timing-function: cubic-bezier(0.455, 0.03, 0.515, 0.955) !important;
+}
+[data-aos-easing="ease-in-cubic"] {
+    transition-timing-function: cubic-bezier(0.55, 0.055, 0.675, 0.19) !important;
+}
+[data-aos-easing="ease-out-cubic"] {
+    transition-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1) !important;
+}
+[data-aos-easing="ease-in-out-cubic"] {
+    transition-timing-function: cubic-bezier(0.645, 0.045, 0.355, 1) !important;
+}
+[data-aos-easing="ease-in-quart"] {
+    transition-timing-function: cubic-bezier(0.895, 0.03, 0.685, 0.22) !important;
+}
+[data-aos-easing="ease-out-quart"] {
+    transition-timing-function: cubic-bezier(0.165, 0.84, 0.44, 1) !important;
+}
+[data-aos-easing="ease-in-out-quart"] {
+    transition-timing-function: cubic-bezier(0.77, 0, 0.175, 1) !important;
+}
+[data-aos-easing="ease-out-slow-one"] {
+    transition-timing-function: cubic-bezier(0.16, 1, 0.3, 1) !important;
+}
+[data-aos-easing="ease-out-slow-two"] {
+    transition-timing-function: cubic-bezier(0.19, 1, 0.22, 1) !important;
+}
+
+/* Example: Custom Fade Entrance */
+[data-aos="fade-entrance"] {
+    opacity: 0;
+    transform: translateY(30px) scale(0.95);
+    transition-property: transform, opacity;
+}
+
+[data-aos="fade-entrance"].aos-animate {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+}
+
+/* Example: Custom Entrance Cool */
+[data-aos="entrance-cool"] {
+    opacity: 0;
+    transform: translateY(50px) rotate(-5deg);
+    transition-property: transform, opacity;
+}
+
+[data-aos="entrance-cool"].aos-animate {
+    opacity: 1;
+    transform: translateY(0) rotate(0deg);
+}
+
+/* Example: Custom Clip Up */
+[data-aos="clip-up"] {
+    clip-path: inset(100% 0 0 0);
+    transition-property: clip-path;
+}
+
+[data-aos="clip-up"].aos-animate {
+    clip-path: inset(0 0 0 0);
+}
+
+/* Example: Custom Clip Up Fade */
+[data-aos="clip-up-fade"] {
+    opacity: 0;
+    clip-path: inset(100% 0 0 0);
+    transition-property: clip-path, opacity;
+}
+
+[data-aos="clip-up-fade"].aos-animate {
+    opacity: 1;
+    clip-path: inset(0 0 0 0);
+}
+
+/* Example: Custom Clip Scale */
+[data-aos="clip-scale"] {
+    clip-path: inset(50% 50% 50% 50%);
+    transform: scale(0.8);
+    transition-property: clip-path, transform;
+}
+
+[data-aos="clip-scale"].aos-animate {
+    clip-path: inset(0 0 0 0);
+    transform: scale(1);
+}
+
+/* Add your custom animations below this line */
+/* ========================================== */
+
+/* Example Template:
+[data-aos="your-animation-name"] {
+    opacity: 0;
+    transform: translateY(20px);
+    transition-property: transform, opacity;
+}
+
+[data-aos="your-animation-name"].aos-animate {
+    opacity: 1;
+    transform: translateY(0);
+}
+*/

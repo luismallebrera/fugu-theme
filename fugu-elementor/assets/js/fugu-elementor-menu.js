@@ -1,0 +1,1 @@
+document.addEventListener("DOMContentLoaded",()=>{document.querySelectorAll('a[href="admin.php?page=fugu-elementor-ai-site-planner"], a[href="admin.php?page=fugu-elementor-theme-builder"]').forEach(e=>{e.setAttribute("target","_blank")})});

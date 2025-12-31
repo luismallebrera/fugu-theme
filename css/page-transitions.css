@@ -1,0 +1,80 @@
+/**
+ * Page Transitions Styles
+ * Default styles for page transition elements
+ * Note: Duration is set dynamically via inline CSS in functions.php
+ */
+
+/* Transition Panel Background */
+.transition-pannel-bg {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: #000;
+    z-index: 801;
+    transform: scaleY(0);
+    transform-origin: top;
+    pointer-events: none;
+    transition-property: transform;
+    transition-timing-function: cubic-bezier(0.83, 0, 0.17, 1);
+    transition-duration: 0.9s;
+    transition-delay: 0s;
+}
+
+.transition-pannel-bg::before {
+    content: "";
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    margin-right: auto;
+    margin-left: auto;
+    pointer-events: none;
+    z-index: var(--grid-line-z-index, 0);
+    min-height: 100vh;
+    width: calc(var(--grid-line-width) - (2 * 0px));
+    max-width: var(--grid-line-max-width, 100%);
+    background-size: calc(100% + var(--grid-line-thickness, 1px)) 100%;
+    background-image: repeating-linear-gradient(var(--grid-line-direction, 90deg), var(--grid-line-column-color, transparent), var(--grid-line-column-color, transparent) calc((100% / var(--grid-line-columns, 12)) - var(--grid-line-thickness, 1px)), var(--grid-line-color, #eee) calc((100% / var(--grid-line-columns, 12)) - var(--grid-line-thickness, 1px)), var(--grid-line-color, #eee) calc(100% / var(--grid-line-columns, 12)));
+    outline: 1px solid var(--grid-line-color, #eee);
+}
+
+body.close .transition-pannel-bg {
+    transform-origin: bottom;
+}
+
+.transition-pannel-bg.active {
+    transform: scaleY(1);
+    pointer-events: auto;
+}
+
+.transition-pannel-bg.initial-load {
+    transform: scaleY(1) !important;
+    pointer-events: auto;
+}
+
+/* Transition Borders Background */
+.transition-borders-bg {
+    width: 100%;
+    height: 100vh;
+    position: fixed;
+    background-color: #121e50;
+    top: 0;
+    left: 0;
+    z-index: 800;
+    pointer-events: none;
+    clip-path: polygon(0% 0%, 0% 100%, 0 100%, 0 0, 100% 0, 100% 100%, 0 100%, 0 100%, 100% 100%, 100% 0%);
+    transition-property: clip-path;
+    transition-timing-function: cubic-bezier(0.57, 0, 0.42, 1);
+}
+
+.transition-borders-bg.active {
+    clip-path: polygon(0 0, 0% 100%, 6% 100%, 6% 15%, 94% 15%, 94% 85%, 6% 85%, 6% 100%, 100% 100%, 100% 0%);
+}
+
+/* Body transition states */
+body.close {
+    overflow: hidden;
+}

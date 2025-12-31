@@ -1,0 +1,16 @@
+{
+  "name": "elementor-blank-starter",
+  "version": "1.0.0",
+  "description": "Tema WordPress minimalista para Elementor sin dependencias externas",
+  "main": "index.php",
+  "scripts": {},
+  "keywords": [
+    "wordpress",
+    "theme",
+    "elementor",
+    "customizer",
+    "performance"
+  ],
+  "author": "Luis Mallebrera",
+  "license": "GPL-2.0-or-later"
+}

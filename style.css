@@ -1,0 +1,28 @@
+/*
+Theme Name: Fugu Theme
+Theme URI: https://github.com/luismallebrera/fugu-theme
+Author: Fugu Studio
+Description: Tema minimalista para construir todo con Elementor (header, body y footer)
+Version: 1.0
+Requires at least: 6.0
+Requires PHP: 7.4
+License: GPL v2 or later
+License URI: https://www.gnu.org/licenses/gpl-2.0.html
+Text Domain: fugu-theme
+*/
+
+/* Reset básico */
+body {
+    margin: 0;
+    padding: 0;
+}
+
+/* Header positioning for z-index */
+header {
+    position: relative;
+}
+
+/* Desactivar scroll-behavior nativo para Lenis */
+html {
+    scroll-behavior: auto !important;
+}
